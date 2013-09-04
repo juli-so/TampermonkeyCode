@@ -105,6 +105,9 @@ function setCaretToPos (input, pos) {
          setCaretToPos(document.getElementById("source"), position+1);
          return false;
      });
+     $(document).add("#source").bind('keydown', 'Ctrl+return', function(){
+         $("#result_box").html($("#result_box").html() + "的");
+     });
      /*$(document).bind('keydown', 'j', function(){
          var menu = $(".goog-menu .goog-menu-vertical .alt-menu");
          alert(menu.attr("display"));
