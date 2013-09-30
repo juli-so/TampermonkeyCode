@@ -12,7 +12,7 @@
 // ==/UserScript==
 
  var selectAll = function() {
-     $("#lst-ib").select();
+     $("input").get(0).select();
  }
  $(document).ready(function(){
      $(document).add("#lst-ib").bind('keydown', 'Ctrl+a', function(){selectAll();return false;});
