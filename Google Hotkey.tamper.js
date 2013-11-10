@@ -11,9 +11,22 @@
 // @copyright  2012+, You
 // ==/UserScript==
 
+    function getAllElementsWithAttribute()
+    {
+      var matchingElements = [];
+      var allElements = document.getElementsByTagName('input');
+      for (var i = 0; i < allElements.length; i++)
+      {
+        if (allElements[i].getAttribute("type") == "text" )
+        {
+            return allElements[i];
+        }
+      }
+        return 0;
+    }
  var selectAll = function() {
-     $("input").get(0).select();
+     getAllElementsWithAttribute().select();
  }
  $(document).ready(function(){
-     $(document).add("#lst-ib").bind('keydown', 'Ctrl+a', function(){selectAll();return false;});
+     $(document).add("#gbqfq").bind('keydown', 'Ctrl+a', function(){selectAll();return false;});
  }); 
