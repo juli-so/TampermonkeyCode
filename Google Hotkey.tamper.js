@@ -27,7 +27,10 @@
         return 0;
     }
  var selectAll = function() {
-     getAllElementsWithAttribute().select();
+     var ele = getAllElementsWithAttribute();
+     if ( ele != 0 ) {
+     	getAllElementsWithAttribute().select();
+     }
  }
  $(document).ready(function(){
      $(document).add("#gbqfq").bind('keydown', 'Ctrl+a', function(){selectAll();return false;});
