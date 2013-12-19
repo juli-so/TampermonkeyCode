@@ -1,6 +1,6 @@
 // ==UserScript==
 // @name       Google Hotkey
-// @version    0.1
+// @version    0.2
 // @description  enter something useful
 // @match      https://www.google.com.hk/search*
 // @match      https://www.google.com/search*
