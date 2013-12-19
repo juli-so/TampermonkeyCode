@@ -29,7 +29,7 @@
  var selectAll = function() {
      var ele = getAllElementsWithAttribute();
      if ( ele != 0 ) {
-     	getAllElementsWithAttribute().select();
+     	ele.select();
      }
  }
  window.addEventListener ("load", LocalMain, false);
