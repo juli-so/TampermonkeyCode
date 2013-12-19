@@ -32,6 +32,9 @@
      	getAllElementsWithAttribute().select();
      }
  }
- $(document).ready(function(){
-     $(document).add("#gbqfq").bind('keydown', 'Ctrl+a', function(){selectAll();return false;});
- }); 
+ window.addEventListener ("load", LocalMain, false);
+
+function LocalMain ()
+{
+    $(document).add("#gbqfq").bind('keydown', 'Ctrl+a', function(){selectAll();return false;});
+}
