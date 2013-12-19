@@ -8,7 +8,7 @@
 // @match      http://www.google.com.hk/search*
 // @match      http://*/*
 // @match      https://*/*
-// @updateURL  https://github.com/richard-liang/TampermonkeyCode/raw/master/Google%20Hotkey.tamper.js
+// @updateURL  https://raw.github.com/richard-liang/TampermonkeyCode/master/Google%20Hotkey.tamper.js
 // @require  http://code.jquery.com/jquery-1.10.1.min.js  
 // @require  http://www.michaelckennedy.net/samples/blog/HotKeys/js/jquery.hotkeys-0.8.js  
 // @copyright  2012+, You
