@@ -36,5 +36,5 @@
 
 function LocalMain ()
 {
-    $(document).add("#gbqfq").bind('keydown', 'Ctrl+a', function(){selectAll();return false;});
+    $(document).bind('keydown', 'Ctrl+a', function(){selectAll();return false;});
 }
