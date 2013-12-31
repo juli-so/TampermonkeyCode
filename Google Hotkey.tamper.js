@@ -18,6 +18,7 @@
     {
       var matchingElements = [];
       var allElements = document.getElementsByTagName('input');
+      alert(allElements.length);
       for (var i = 0; i < allElements.length; i++)
       {
         if (allElements[i].getAttribute("type") == "text" )
