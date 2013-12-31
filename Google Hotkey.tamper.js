@@ -8,7 +8,6 @@
 // @match      http://www.google.com.hk/search*
 // @match      http://*/*
 // @match      https://*/*
-// @updateURL  https://raw.github.com/richard-liang/TampermonkeyCode/master/Google%20Hotkey.tamper.js
 // @require  http://code.jquery.com/jquery-1.10.1.min.js  
 // @require  http://www.michaelckennedy.net/samples/blog/HotKeys/js/jquery.hotkeys-0.8.js  
 // @copyright  2012+, You
@@ -18,7 +17,6 @@
     {
       var matchingElements = [];
       var allElements = document.getElementsByTagName('input');
-      alert(allElements.length);
       for (var i = 0; i < allElements.length; i++)
       {
         if (allElements[i].getAttribute("type") == "text" )
