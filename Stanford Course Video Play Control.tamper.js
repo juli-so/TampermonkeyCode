@@ -1,6 +1,6 @@
 // ==UserScript==
 // @name       Stanford Course Video Play Control
-// @version    0.1
+// @version    0.11
 // @description  enter something useful
 // @match      https://class.stanford.edu/*
 // @require  http://code.jquery.com/jquery-1.10.1.min.js  
