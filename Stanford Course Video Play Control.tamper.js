@@ -36,4 +36,7 @@ function LocalMain ()
         	simulateClick(btns2.get(0));
         }
     });
+    $("#transcript-captions").css("right","");
+    $("#transcript-captions").css("left","0");
+    $("#transcript-captions").css("max-width","15%");
 }
