@@ -1,11 +1,13 @@
 // ==UserScript==
 // @name       Google Hotkey
-// @version    0.2
+// @version    0.3
 // @description  enter something useful
 // @match      https://www.google.com.hk/search*
 // @match      https://www.google.com/search*
 // @match      http://www.google.com/search*
 // @match      http://www.google.com.hk/search*
+// @exclude	   https://translate.google.com/*
+// @exclude	   https://translate.google.cn/*
 // @match      http://*/*
 // @match      https://*/*
 // @require  http://code.jquery.com/jquery-1.10.1.min.js  
