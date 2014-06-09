@@ -1,10 +1,12 @@
  // ==UserScript==  
  // @name    Translate Hotkey
  // @namespace http://twitter.com/rock_cloud  
- // @version  0.3  
+ // @version  0.4  
  // @description A hotkey script for google translate web  
  // @match   http://translate.google.com/*  
  // @match   http://translate.google.cn/*  
+ // @match   https://translate.google.com/*  
+ // @match   https://translate.google.cn/*  
  // @require  http://code.jquery.com/jquery-1.10.1.min.js  
  // @require  http://www.michaelckennedy.net/samples/blog/HotKeys/js/jquery.hotkeys-0.8.js  
  // @copyright 2013, Richard.Liang
@@ -59,25 +61,32 @@ function setCaretToPos (input, pos) {
      return _results;  
  }  
  var selectAll = function() {
+     alert("select");
      $("#source").select();
+     
  }
  var listen = function() {
+     alert("select");
      simulateClick($("#gt-src-listen").get(0));
      $("#source").focus();
  }
  var listen2 = function() {
+     alert("listen2");
      simulateClick($("#gt-res-listen").get(0));
      $("#source").focus();
  }
  var star = function() {
+     alert("star");
      simulateClick($(".goog-toolbar-button.goog-inline-block.trans-pb-button").get(0));
      $("#source").select();
  }
  var swap = function() {
+     alert("swap");
      simulateClick($("#gt-swap").get(0));
      $("#source").focus();
  }
  var correct = function() {
+     alert("correct");
      simulateClick($("#spelling-correction a").get(0));
      $("#source").focus();
  }
@@ -108,11 +117,4 @@ function setCaretToPos (input, pos) {
      $(document).add("#source").bind('keydown', 'Ctrl+return', function(){
          $("#result_box").html($("#result_box").html() + "的");
      });
-     /*$(document).bind('keydown', 'j', function(){
-         var menu = $(".goog-menu .goog-menu-vertical .alt-menu");
-         alert(menu.attr("display"));
-         if ( == "none") {
-             
-         }
-     });*/
  }); 
