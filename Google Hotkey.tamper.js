@@ -1,6 +1,6 @@
 // ==UserScript==
 // @name       Google Hotkey
-// @version    0.3
+// @version    0.3.1
 // @description  enter something useful
 // @match      https://www.google.com.hk/search*
 // @match      https://www.google.com/search*
@@ -11,7 +11,7 @@
 // @match      http://*/*
 // @match      https://*/*
 // @require  http://code.jquery.com/jquery-1.10.1.min.js  
-// @require  http://www.michaelckennedy.net/samples/blog/HotKeys/js/jquery.hotkeys-0.8.js  
+// @require  https://raw.githubusercontent.com/jeresig/jquery.hotkeys/master/jquery.hotkeys.js
 // @copyright  2012+, You
 // ==/UserScript==
 
