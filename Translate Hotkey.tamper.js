@@ -1,14 +1,14 @@
  // ==UserScript==  
  // @name    Translate Hotkey
  // @namespace http://twitter.com/rock_cloud  
- // @version  0.4  
+ // @version  0.4.1  
  // @description A hotkey script for google translate web  
  // @match   http://translate.google.com/*  
  // @match   http://translate.google.cn/*  
  // @match   https://translate.google.com/*  
  // @match   https://translate.google.cn/*  
  // @require  http://code.jquery.com/jquery-1.10.1.min.js  
- // @require  http://www.michaelckennedy.net/samples/blog/HotKeys/js/jquery.hotkeys-0.8.js  
+ // @require  https://raw.githubusercontent.com/jeresig/jquery.hotkeys/master/jquery.hotkeys.js  
  // @copyright 2013, Richard.Liang
  // ==/UserScript==
  // The simulateClick function came from Chrome Extension "Vimium"
