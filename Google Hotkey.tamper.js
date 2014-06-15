@@ -1,6 +1,6 @@
 // ==UserScript==
 // @name       Google Hotkey
-// @version    0.3.1
+// @version    0.3.2
 // @description  enter something useful
 // @match      https://www.google.com.hk/search*
 // @match      https://www.google.com/search*
@@ -14,7 +14,11 @@
 // @require  https://raw.githubusercontent.com/jeresig/jquery.hotkeys/master/jquery.hotkeys.js
 // @copyright  2012+, You
 // ==/UserScript==
-
+if (window.top != window.self)  //don't run on frames or iframes
+{
+    //Optional: GM_log ('In frame');
+    return;
+}
     function getAllElementsWithAttribute()
     {
       var matchingElements = [];
