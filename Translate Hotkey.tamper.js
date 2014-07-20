@@ -1,7 +1,7 @@
  // ==UserScript==  
  // @name    Translate Hotkey
  // @namespace http://twitter.com/rock_cloud  
- // @version  0.4.1  
+ // @version  0.4.2  
  // @description A hotkey script for google translate web  
  // @match   http://translate.google.com/*  
  // @match   http://translate.google.cn/*  
