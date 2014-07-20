@@ -61,32 +61,26 @@ function setCaretToPos (input, pos) {
      return _results;  
  }  
  var selectAll = function() {
-     alert("select");
      $("#source").select();
      
  }
  var listen = function() {
-     alert("select");
      simulateClick($("#gt-src-listen").get(0));
      $("#source").focus();
  }
  var listen2 = function() {
-     alert("listen2");
      simulateClick($("#gt-res-listen").get(0));
      $("#source").focus();
  }
  var star = function() {
-     alert("star");
      simulateClick($(".goog-toolbar-button.goog-inline-block.trans-pb-button").get(0));
      $("#source").select();
  }
  var swap = function() {
-     alert("swap");
      simulateClick($("#gt-swap").get(0));
      $("#source").focus();
  }
  var correct = function() {
-     alert("correct");
      simulateClick($("#spelling-correction a").get(0));
      $("#source").focus();
  }
