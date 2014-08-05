@@ -1,6 +1,6 @@
 // ==UserScript==
 // @name       Input Focusor
-// @version    0.3.3
+// @version    0.3.4
 // @description  Focus on the first input of a web page
 // @match      https://www.google.com.hk/search*
 // @match      https://www.google.com/search*
@@ -21,23 +21,27 @@ if (window.top != window.self) {
 
 var selectAll = function() {
     var inputs = $("input[type='text']");
-    
-    if ( inputs.length > 0 ) {
+    if ( typeof inputs === 'object' ) {
+        inputs.focus();
+        inputs.select();
+    } else if ( inputs.length > 1 ) {
         var maxid = 0;
         var maxArea = $(inputs[0]).width()*$(inputs[0]).height();
-        for ( i = 0; i < inputs.length; i++ ) {
+        for ( i = 1; i < inputs.length; i++ ) {
             area = $(inputs[i]).width()*$(inputs[i]).height();
             if (area > maxArea) {
                 maxid = i;
                 maxArea = area;
+                
             }
         }
-        inputs[i].select();
+        inputs[maxid].focus();
+        inputs[maxid].select();
     }
 }
 
 $(window).load(function() {
-    $(document).bind('keydown', 'Ctrl+a', function() { 
+    $(document).bind('keydown', 'Ctrl+a', function() {
         selectAll();
         return false;
     });
