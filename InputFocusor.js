@@ -1,6 +1,6 @@
 // ==UserScript==
 // @name       Input Focusor
-// @version    0.3.4
+// @version    0.3.5
 // @description  Focus on the first input of a web page
 // @match      https://www.google.com.hk/search*
 // @match      https://www.google.com/search*
