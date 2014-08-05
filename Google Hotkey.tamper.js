@@ -1,7 +1,7 @@
 // ==UserScript==
-// @name       Google Hotkey
-// @version    0.3.2
-// @description  enter something useful
+// @name       Input Focusor
+// @version    0.3.3
+// @description  Focus on the first input of a web page
 // @match      https://www.google.com.hk/search*
 // @match      https://www.google.com/search*
 // @match      http://www.google.com/search*
@@ -12,35 +12,35 @@
 // @match      https://*/*
 // @require  http://code.jquery.com/jquery-1.10.1.min.js  
 // @require  https://raw.githubusercontent.com/jeresig/jquery.hotkeys/master/jquery.hotkeys.js
-// @copyright  2012+, You
+// @copyright  2012+, richard-liang
 // ==/UserScript==
-if (window.top != window.self)  //don't run on frames or iframes
-{
-    //Optional: GM_log ('In frame');
+//don't run on frames or iframes
+if (window.top != window.self) {
     return;
 }
-    function getAllElementsWithAttribute()
-    {
-      var matchingElements = [];
-      var allElements = document.getElementsByTagName('input');
-      for (var i = 0; i < allElements.length; i++)
-      {
-        if (allElements[i].getAttribute("type") == "text" )
-        {
-            return allElements[i];
-        }
-      }
-        return 0;
-    }
- var selectAll = function() {
-     var ele = getAllElementsWithAttribute();
-     if ( ele != 0 ) {
-     	ele.select();
-     }
- }
- window.addEventListener ("load", LocalMain, false);
 
-function LocalMain ()
-{
-    $(document).bind('keydown', 'Ctrl+a', function(){selectAll();return false;});
+var selectAll = function() {
+    var inputs = $("input[type='text']");
+    
+    if ( inputs.length > 0 ) {
+        var maxid = 0;
+        var maxArea = $(inputs[0]).width()*$(inputs[0]).height();
+        for ( i = 0; i < inputs.length; i++ ) {
+            area = $(inputs[i]).width()*$(inputs[i]).height();
+            if (area > maxArea) {
+                maxid = i;
+                maxArea = area;
+            }
+        }
+        inputs[i].select();
+    }
 }
+
+$(window).load(function() {
+    $(document).bind('keydown', 'Ctrl+a', function() { 
+        selectAll();
+        return false;
+    });
+})
+
+
