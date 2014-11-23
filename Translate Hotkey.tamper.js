@@ -1,12 +1,14 @@
  // ==UserScript==  
  // @name    Translate Hotkey
  // @namespace http://twitter.com/rock_cloud  
- // @version  0.4.2  
+ // @version  0.4.3  
  // @description A hotkey script for google translate web  
  // @match   http://translate.google.com/*  
  // @match   http://translate.google.cn/*  
+ // @match   http://translate.google.com.hk/*  
  // @match   https://translate.google.com/*  
- // @match   https://translate.google.cn/*  
+ // @match   https://translate.google.cn/*
+ // @match   https://translate.google.com.hk/*  
  // @require  http://code.jquery.com/jquery-1.10.1.min.js  
  // @require  https://raw.githubusercontent.com/jeresig/jquery.hotkeys/master/jquery.hotkeys.js  
  // @copyright 2013, Richard.Liang
